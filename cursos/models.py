@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Base(models.Model):
-    publicacao = models.DateTimeField(auto_now_add=True)
+    criacao = models.DateTimeField(auto_now_add=True)
     atualizacao = models.DateTimeField(auto_now_add=True)
     ativo = models.BooleanField(default=True)
 
@@ -36,4 +36,3 @@ class Avaliacao(Base):
 
     def __str__(self):
         return f'{self.nome} avaliou o curso {self.curso} com nota {self.avaliacao}'
-
